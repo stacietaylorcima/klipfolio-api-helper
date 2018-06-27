@@ -5,9 +5,9 @@ require "csv"
 class Client
   include HTTParty
 
-  # def initialize(u, p)
-  #   @auth = { username: u, password: p }
-  # end
+  def initialize(u, p)
+    @auth = { username: u, password: p }
+  end
 
   # The method starts by reading the file, using  File.read.
   # The file will be in a CSV format. We use the CSV class to parse the file.
@@ -31,10 +31,10 @@ class Client
     # Use HTTP body option to pass all of the required parameters
     response = self.class.post("https://app.klipfolio.com/api/1.0/clients", basic_auth: @auth,
     body: {
-      "name": name, # Get name from csv file
+      "name": name,
       "description": "",
       "seats": 1,
-      "status": "Active"
+      "status": "setup"
       })
       puts "Your client was created!" if response.success?
   end
