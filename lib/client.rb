@@ -19,7 +19,7 @@ class Client
     csv.each do |row|
       row_hash = row.to_hash
       puts row_hash
-      create_client(row_hash["name"])
+      create_client(row_hash["Client Name"])
     end
   end
 
@@ -27,15 +27,18 @@ class Client
   # Params: name = the client's name found on spreadsheet, string
   def create_client(name)
     # Point the HTTP POST method at the clients endpoint of Klipfolio's API.
-    # Use HTTP header option to pass the auth_token.
+    # Use HTTParty basic suth to pass valid credentials from the initialize method.
+    # Use HTTP header option to pass the content type.
     # Use HTTP body option to pass all of the required parameters
-    response = self.class.post("https://app.klipfolio.com/api/1.0/clients", basic_auth: @auth,
+    puts name
+    response = self.class.post("https://app.klipfolio.com/api/1.0/clients", basic_auth: @auth, headers: { "Content-Type" => "application/json" },
     body: {
-      "name": name,
+      "name": "Test",
       "description": "",
-      "seats": 1,
-      "status": "setup"
-      })
+      "seats": 5,
+      "status": "active"
+    }.to_json)
+      puts response.body
       puts "Your client was created!" if response.success?
   end
 end

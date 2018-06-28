@@ -20,7 +20,7 @@ This script loops through each row of a csv that contains client names and creat
 * Navigate to the `lib` directory
 * Launch `irb`
 * `require './client.rb'`
-* `client = Client.new`
+* `client = Client.new("yourusername", "yourpassword")`
 * `client.import_from_csv('./clients.csv')`
 
 ## Customize the script
