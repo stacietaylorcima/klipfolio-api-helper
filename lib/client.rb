@@ -17,9 +17,8 @@ class Client
     csv = CSV.parse(csv_text, headers: true, skip_blanks: true)
     # Iterate over the CSV::Table object's rows, create a hash for each row, and convert each row_hash to a Client by using the create_client method.
     csv.each do |row|
-      row_hash = row.to_hash
-      puts row_hash
-      create_client(row_hash["Client Name"])
+      name = row.to_s.chomp
+      create_client(name)
     end
   end
 
@@ -33,12 +32,12 @@ class Client
     puts name
     response = self.class.post("https://app.klipfolio.com/api/1.0/clients", basic_auth: @auth, headers: { "Content-Type" => "application/json" },
     body: {
-      "name": "Test",
+      "name": name,
       "description": "",
       "seats": 5,
       "status": "active"
     }.to_json)
-      puts response.body
-      puts "Your client was created!" if response.success?
+    puts response.body
+    puts "Your client was created!" if response.success?
   end
 end
