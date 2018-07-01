@@ -14,6 +14,19 @@ This script will create a new client for each row on the spreadsheet using the n
 
 This script loops through each row of a csv that contains client names and creates a client in the Klipfolio app for each. It creates the clients by sending a HTTP POST request to Klipfolio's API: [see documentation here](https://apidocs.klipfolio.com/reference#section-post-clients)
 
+The client that is created includes the following attributes:
+* **Client Name**
+* **Account Status:** active
+* **Resources:**
+  * Max Dashboard Limit: 1
+  * Max API Calls Per Day:
+  * Max Users: 5
+* **Enabled Features:** 
+  * Download Reports
+  * Email Reports
+  * Private Links
+  * Public Links
+
 ## To use:
 
 * Create a csv that includes a header, followed by a list of only your client's names in the A column. Save this csv in this project's `lib` directory.
@@ -25,4 +38,4 @@ This script loops through each row of a csv that contains client names and creat
 
 ## Customize the script
 
-There are 6 parameters you can include to customize the client you are creating: `name, description, status, seats (optional), custom_theme (optional), external_id (optional)`. See Klipfolio's API Documentation for [POST Clients](https://apidocs.klipfolio.com/reference#section-post-clients)
+`create_client` method: There are 6 parameters you can include to customize the client you are creating: `name, description, status, seats (optional), custom_theme (optional), external_id (optional)`. See Klipfolio's API Documentation for [POST Clients](https://apidocs.klipfolio.com/reference#section-post-clients)
