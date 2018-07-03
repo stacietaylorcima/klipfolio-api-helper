@@ -37,12 +37,20 @@ class Client
     }.to_json)
     puts response.body
     puts "Your client was created!" if response.success?
+
+    # Extract the new client's ID from the HTTP response so that it can be passed to the update_features & update_resources methods. 
+    client_id = response["meta"]["location"]
+    client_id.slice!("/clients/")
+    p client_id
+
+    # update_resources(client_id)
+    update_features(client_id)
   end
 
   # Adds resources to newly created Klipfolio client
   # Params: client_id is extracted from the response of the POST request in the create_client method, string
   def update_resources(client_id)
-    response = self.class.put("https://app.klipfolio.com/api/1.0/clients/{client_id}/resources", basic_auth: @auth, headers: { "Content-Type" => "application/json" },
+    response = self.class.put("https://app.klipfolio.com/api/1.0/clients/client_id/resources", basic_auth: @auth, headers: { "Content-Type" => "application/json" },
     body: {
       # need to add API Calls Per Day
       "resources": [{"name":"dashboard.tabs.total", "value":7}]
@@ -54,7 +62,7 @@ class Client
   # Adds features to newly created Klipfolio client
   # Params: client_id is extracted from the response of the POST request in the create_client method, string
   def update_features(client_id)
-    response = self.class.put("https://app.klipfolio.com/api/1.0/clients/{client_id}/features", basic_auth: @auth, headers: { "Content-Type" => "application/json" },
+    response = self.class.put("https://app.klipfolio.com/api/1.0/clients/#{client_id}/features", basic_auth: @auth, headers: { "Content-Type" => "application/json" },
     body: {
       features:[{"name":"public_dashboards","enabled":true},
         {"name":"published_dashboards","enabled":true},
