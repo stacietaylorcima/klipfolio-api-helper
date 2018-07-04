@@ -48,6 +48,7 @@ class Client
     update_features(client_id)
     update_facebook_id(client_id, facebook_id)
     create_group(client_id)
+    share_dashboard(client_id)
   end
 
   # Adds resources to newly created Klipfolio client
@@ -93,5 +94,14 @@ class Client
     }.to_json)
     puts response.body
     puts "Group was successfully created." if response.success?
+  end
+
+  def share_dashboard(client_id)
+    response = self.class.post("https://app.klipfolio.com/api/1.0/tabs/2e4dc815febc627a216b511b71afd119/@/import", basic_auth: @auth, headers: { "Content-Type" => "application/json" },
+    body: {
+      'client_id': client_id
+    }.to_json)
+    puts response.body
+    puts "Dashboard template was successfully shared." if response.success?
   end
 end
