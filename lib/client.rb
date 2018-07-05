@@ -19,15 +19,15 @@ class Client
     csv = CSV.parse(csv_text, headers: true, skip_blanks: true)
     # Iterate over the CSV::Table object's rows, create a string for each row, and convert each row to a Client by using the create_client method.
     csv.each do |row|
-      name, facebook_id = row.to_s.split(",").map(&:chomp)
-      create_client(name, facebook_id)
+      name, facebook_id, twitter_handle = row.to_s.split(",").map(&:chomp)
+      create_client(name, facebook_id, twitter_handle)
     end
   end
 
   # Creates a new client and sends a request to Klipfolio's API via the HTTP POST method
   # Params: name = the client's name found on spreadsheet, string
-  def create_client(name, facebook_id)
-    puts name
+  def create_client(name, facebook_id, twitter_handle)
+    puts name, facebook_id, twitter_handle
     # Point the HTTP POST method at the clients endpoint of Klipfolio's API.
     response = self.class.post("https://app.klipfolio.com/api/1.0/clients", basic_auth: @auth, headers: { "Content-Type" => "application/json" },
     body: {
@@ -46,7 +46,7 @@ class Client
 
     update_resources(client_id)
     update_features(client_id)
-    update_facebook_id(client_id, facebook_id)
+    update_company_properties(client_id, facebook_id, twitter_handle)
     create_group(client_id)
     share_dashboard(client_id)
   end
@@ -78,13 +78,14 @@ class Client
 
   # Add the client's Facebook ID as a company property to their Klipfolio account
   # Params: client_id is extracted from the response of the POST request in the create_client method, string
-  def update_facebook_id(client_id, facebook_id)
+  def update_company_properties(client_id, facebook_id, twitter_handle)
     response = self.class.put("https://app.klipfolio.com/api/1.0/clients/#{client_id}/properties", basic_auth: @auth, headers: { "Content-Type" => "application/json" },
     body: {
-    'properties': {'FBPageID': facebook_id}
+    'properties': {'FBPageID': facebook_id,
+      'TwitterHandle': twitter_handle}
     }.to_json)
     puts response.body
-    puts "Client's FBPageID was saved." if response.success?
+    puts "Client's FBPageID & TwitterHandle were saved." if response.success?
   end
 
   def create_group(client_id)
