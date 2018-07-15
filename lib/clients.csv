@@ -1,44 +1,5 @@
-﻿ClientName,FacebookID,TwitterHandle
-25 Degrees,159141910772374,_25degreesHB
-5th Street Steakhouse,272667552763565,5thStreetSteak
-Sutter Street Steakhouse,201221753280795,SutterSteak
-8th Street Grill & Taphouse,368752616523315,8thstreetgrille
-A & T Burgers,184485348260413,atburgers2
-Affordable Automotive,124829940923997,AffordAutoChico
-Angelina's Spaghetti House,110566862295159,angelinasca
-Anthony's II,182821198419004,anthonys_II
-Aquarius Seafood Restaurant,1269344053094160,AquariusSeafood
-Asia Kitchen,164537303557817,AsiaKitchenFL
-B-Man's Teriyaki & Burgers,88325027032,BMansTeriyaki
-Backstop Bar & Grill,713280785374654,Backstop_Grill
-Bird In Hand,137235142966455,BirdinHandChico
-Bites Restaurant,896803407067129,bitesoregon
-Blue Fish Ocean City,235656416449907,BlueFish_OC
-Bob's Air Repair,569254616438973,BobsAirRepair
-Brauburgers,276088832564266,Brauburgers
-Brooklyn Bridge Bagel Works,401339254250,BrooklynBagelCA
-Ca'Bianca,113997081965739,CaBiancaItalian
-Café Mozart,310464656350,CafeMozart_DC
-Casa Carlos Mexican Restaurant,277992528264,CasaCarlosCA
-Chico Collision Center (Fix Auto),493851593996718,FIXAutoChico
-China Blossom,95263915162,chinablossom
-Cilantro's Parilla Y Cantina,122560221089677,CilantrosCA
-Concours Elite Collision Center,493953003999429,Concours_Elite
-Connoisseur Coffee Co,621075091259431,ConnoisseurCoff
-Dairy Queen,193487477480674,Triangle_DQ
-Dale Madsen DDS,531230643648163,DaleMadsenDDS
-Danny's Place,116199555070455,DannysPlaceNM
-Dharani,162049604504214,DharaniVA
-Dragon Well,137831823058840,DragonWellSF
-Ebisu Japanese Restaurant,198521478870,EbisuJapanese
-eight50,700097213390165,eight50HI
-El Charro Mexican Dining,164470666935061,thecharro1947
-El Palomar Restaurant,93554361057,ElPalomarCA
-El Restaurante,160578227290781,restaurantemag
-Bidwell Park Pizza,224678807720110,Bidwell_Pizza
-Celestino's New York Pizza,50265028084,_Celestinos_
-Esplanade Furniture,134499096712926,FurnishChico
-Firehouse Subs - Niagara Falls,590743607953044,FirehouseSubsON
+ClientName,FBPageID,TwitterHandle
+Firehouse Subs Niagara Falls,590743607953044,FirehouseSubsON
 Four Leaves Asian Restaurant,353249748095909,FourLeavesAsian
 Froyo Life,108236172528553,FroyoLifeYogurt
 Hangover Hospital,1621071901494550,HangoversSuckKW
@@ -52,7 +13,7 @@ Italian Cottage,212421596878,Italian_Cottage
 Jaipur Royal Indian Cuisine,155272821151544,JaipurIndianCO
 Jim's Country Style Restaurant,479333515510419,JimsCountryEats
 Kabuto Japanese,212226135466874,KabutoRichmond
-Kafé,130333317526027,drinkkafe
+Kafe,130333317526027,drinkkafe
 Kintaro Sushi Bar and Chinese Cuisine,147570315273418,KintaroSushi
 Bangkok Happy Bowl Thai Bistro and Bar,208846555870168,BangkokHappyBwl
 Tiki Mana Island Grill,1764333417195180,TikiManaCO
@@ -76,13 +37,13 @@ Mala Tang,168779763156336,mala_tang
 Maria's Pizzeria & Restaurant,197034089874,MariasPizzaFL
 Maxfield's Inn,131414480218766,maxfieldsinn
 Maxfield's Restaurant,130998083593778,dinemaxfields
-Michael’s Kitchen Restaurant & Bakery,1440025749571370,MichaelsKitchen
+Michael's Kitchen Restaurant & Bakery,1440025749571370,MichaelsKitchen
 Ming Du,1832936503663980,MingDuMA
 Mission City Creamery,257368061032606,MissionCreamery
 Mission City Federal Credit Union,510892228943732,MissionCityFCU
 Mission Pizza & Pub,551417914911718,MissionPizzaPub
 Mojo Burger,110570182321328,MojoBurger
-Morning Thunder Café,264381960267410,MorningThunderCA
+Morning Thunder Caf,264381960267410,MorningThunderCA
 Mt Fuji Japanese Restaurant,116213611800515,MtFujiHibachi
 Multnomah Falls Lodge Restaurant,138555809538116,MultnomahFall
 Netties Fine Mexican Food,180538641985936,NettiesMexican
@@ -98,8 +59,7 @@ Original Joe's,267886883236172,OriginalJoesSJ
 Ovie Bar & Grill,229731467060771,oviebarandgrill
 Pac Thai,189669394387696,PACThai
 Pacific Thai Santa Cruz,208359584713,pacthaiSC
-Panino Giusto,not in biz mangr,Canelled since Nov. 2017 - J
-Papi's Mexican Grill,not in biz mangr,papismexgrill
+Papi's Mexican Grill,0,papismexgrill
 Park 121,222354791230916,Park121Cafe
 Paula LeDuc Fine Catering,167560816762601,paulaleduc
 Peace-N-Hominy Q Shack,1563697873856970,iHogPnHQ
@@ -107,9 +67,9 @@ Pelican's Cove Restaurant & Bar,1637341916574470,PelicansCove
 Porta Via Italian Foods,171553802375,PortaViaFoods
 Posa Posa,296384030400362,PosaPosaNY
 Rebel Refrigeration,89560082909,vegasACexperts
-Red Toque Café,142659515782243,RedToqueDC
+Red Toque Cafe,142659515782243,RedToqueDC
 Reverie,1402498606656950,reveriechicago
-Richard Walker’s Pancake House,66853216483,richardwalkers
+Richard Walker's Pancake House,66853216483,richardwalkers
 Richie's,1475531426070370,RichiesChicken
 River's End Restaurant & Inn,66442897795,RiversendJenner
 Rosamunde Sausage Grill,167765334037664,rosamundesf
@@ -117,7 +77,7 @@ Roux Dat Cajun Creole,143326302497414,RouxDatCajun
 Royal Aire Heating & Air Conditioning,298206330257872,WeCareRoyalAire
 Rustik Tavern,336912039753477,RustikTavern
 Schnitzel Platz,126895990698577,SchnitzelPlatz
-Schroeder’s,186846641975,SchroedersSF
+Schroeder's,186846641975,SchroedersSF
 Scott & Smitty's,258446326335,scottnsmittys
 Dirty Habit,619445611464790,dirtyhabitsf
 Hotel Zelos,650262515108467,HotelZelos
@@ -144,6 +104,11 @@ Vics Subs,167250260089317,vicssubshop
 Vinny's Pizza Bar,1400071136780250,vinnyspizzabar
 Waraii Sushi,113449242021891,WaraiiSushi
 Wolf Creek Restaurant & Brewing Co,141686281271,wolfcreekscv
-Splash Café,118386808809,splashcafe
-Stan's Maple Café,474492515910142,stansmaplecafe
+Splash Cafe,118386808809,splashcafe
+Stan's Maple Cafe,474492515910142,stansmaplecafe
 My Pi Pizza,84550068660,mypipizzachi
+Highrail,172883740144837,HighrailGA
+Dos Amigos,218888798663972,DosAmigosOH
+La Locanda,60635649357,LaLocandaPA
+D'Parma Restaurant,142748725916495,dparmaItalianMA
+MarketPlace Grill,89169807658,marketplacenews

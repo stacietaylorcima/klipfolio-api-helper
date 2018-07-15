@@ -1,3 +1,6 @@
+[![Screenshot of Klipfolio API Helper that links to a viedo explanation of the tool on YouTube](https://i.imgur.com/2qSY7yI.png)](https://www.youtube.com/watch?v=RzaURZv1GYg&t=)
+
+
 # Klipfolio API Script
 
 Have you recently signed up with Klipfolio for reporting services? Do you need to import a bulk load of clients? Then this code is for you! This script is used to simplify the client setup process for when you need to add a large number at once.
